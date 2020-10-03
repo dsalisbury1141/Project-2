@@ -1,0 +1,158 @@
+Date,Type,Company,Female,Male
+2014,Social Media,Facebook,31,69
+2014,Social Media,Instagram,31,69
+2014,Social Media,Google+,30,70
+2014,Social Media,YouTube,30,70
+2014,Social Media,LinkedIn,39,61
+2014,Social Media,Pinterest,40,60
+2014,Social Media,Tumblr,37,62
+2014,Social Media,Flickr,37,62
+2014,Social Media,Twitter,30,70
+2014,Tech,Yahoo!,37,62
+2014,Tech,Google,30,70
+2014,Tech,Apple,30,70
+2014,Tech,Cisco,23,77
+2014,Tech,eBay,42,58
+2014,Tech,HP,33,67
+2014,Tech,Indiegogo,45,55
+2014,Tech,Nvidia,16.05,83.95
+2014,Tech,Dell,30,70.45
+2014,Tech,Ingram Micro,42,58.22
+2014,Tech,Intel,25,75.44
+2014,Tech,Groupon,47,53
+2014,Tech,Amazon,37,63
+2014,Tech,Salesforce,29,71
+2014,Tech,Pandora,49,51
+2014,Tech,Microsoft,29,71
+2014,Entity,DiversityInc top 50,54,46
+2014,Entity,Fortune 500 CEOs,4.8,95
+2014,Entity,Kaiser Permanente,76,24
+2014,Government,US Congress,19,81
+2014,Entity,Venture Capitalists,11,89
+2016,Social Media,Facebook,33,67
+2016,Social Media,Instagram,31,69
+2016,Social Media,Google+,30,70
+2016,Social Media,YouTube,30,70
+2016,Social Media,LinkedIn,42,58
+2016,Social Media,Pinterest,40,60
+2016,Social Media,Tumblr,37,62
+2016,Social Media,Flickr,37,62
+2016,Social Media,Twitter,34,56
+2016,Tech,Yahoo!,37,62
+2016,Tech,Google,31,69
+2016,Tech,Apple,32,68
+2016,Tech,Cisco,23,77
+2016,Tech,eBay,43,57
+2016,Tech,HP,33,67
+2016,Tech,Indiegogo,45,55
+2016,Tech,Nvidia,16.05,83.95
+2016,Tech,Dell,30,70.45
+2016,Tech,Ingram Micro,42,58.22
+2016,Tech,Intel,25,75.44
+2016,Tech,Groupon,47,53
+2016,Tech,Amazon,37,63
+2016,Tech,Etsy,51,49
+2016,Tech,Microsoft,28,72
+2016,Tech,Salesforce,29,71
+2016,Tech,Pandora,49,51
+2016,Tech,Uber,36.1,63.9
+2016,Entity,DiversityInc top 50,54,46
+2016,Entity,Fortune 500 CEOs,4.8,95
+2016,Entity,Kaiser Permanente,76,24
+2016,Government,US Congress,19,81
+2016,Entity,Venture Capitalists,11,89
+2017,Social Media,Facebook,35,65
+2017,Social Media,Instagram,35,65
+2017,Social Media,Google+,31,69
+2017,Social Media,YouTube,31,69
+2017,Social Media,LinkedIn,42,58
+2017,Social Media,Pinterest,45,55
+2017,Social Media,Tumblr,37,63
+2017,Social Media,Flickr,37,63
+2017,Social Media,Twitter,37,63
+2017,Tech,Yahoo!,37,63
+2017,Tech,Google,31,69
+2017,Tech,Apple,32,68
+2017,Tech,Cisco,24,76
+2017,Tech,eBay,38,62
+2017,Tech,HP,37,63
+2017,Tech,Indiegogo,50,50
+2017,Tech,Nvidia,17,83
+2017,Tech,Dell,28,72
+2017,Tech,Ingram Micro,31,69
+2017,Tech,Intel,26,73.9
+2017,Tech,Groupon,44,56
+2017,Tech,Amazon,39,61
+2017,Tech,Etsy,54,46
+2017,Tech,Microsoft,26,74
+2017,Tech,Salesforce,31,69
+2017,Tech,Pandora,49,51
+2017,Tech,Uber,36.1,63.9
+2017,Entity,DiversityInc top 50,44,56
+2017,Entity,Fortune 500 CEOs,6,94
+2017,Government,US Congress,20,80
+2015,Social Media,Facebook,32,68
+2015,Social Media,Instagram,31,69
+2015,Social Media,Google+,30,70
+2015,Social Media,YouTube,30,70
+2015,Social Media,LinkedIn,42,58
+2015,Social Media,Pinterest,40,60
+2015,Social Media,Tumblr,37,62
+2015,Social Media,Flickr,37,62
+2015,Social Media,Twitter,30,70
+2015,Tech,Yahoo!,37,62
+2015,Tech,Google,30,70
+2015,Tech,Apple,31,69
+2015,Tech,Cisco,23,77
+2015,Tech,eBay,43,57
+2015,Tech,HP,33,67
+2015,Tech,Indiegogo,45,55
+2015,Tech,Nvidia,16.05,83.95
+2015,Tech,Dell,30,70.45
+2015,Tech,Ingram Micro,42,58.22
+2015,Tech,Intel,25,75.44
+2015,Tech,Groupon,47,53
+2015,Tech,Amazon,37,63
+2015,Tech,Etsy,51,49
+2015,Tech,Microsoft,28,72
+2015,Tech,Salesforce,29,71
+2015,Tech,Pandora,49,51
+2015,Entity,DiversityInc top 50,54,46
+2015,Entity,Fortune 500 CEOs,4.8,95
+2015,Entity,Kaiser Permanente,76,24
+2015,Government,US Congress,19,81
+2015,Entity,Venture Capitalists,11,89
+2018,Social Media,Facebook,35,65
+2018,Social Media,Instagram,35,65
+2018,Social Media,Google+,31,69
+2018,Social Media,YouTube,31,69
+2018,Social Media,LinkedIn,42,58
+2018,Social Media,Pinterest,45,55
+2018,Social Media,Tumblr,37,63
+2018,Social Media,Flickr,37,63
+2018,Social Media,Twitter,38.4,61.6
+2018,Tech,Yahoo!,37,63
+2018,Tech,Google,31,69
+2018,Tech,Apple,32,68
+2018,Tech,Cisco,24,76
+2018,Tech,eBay,40,60
+2018,Tech,HP,37,63
+2018,Tech,Indiegogo,50,50
+2018,Tech,Nvidia,17,83
+2018,Tech,Dell,28,72
+2018,Tech,Ingram Micro,31,69
+2018,Tech,Intel,26.5,73.5
+2018,Tech,Groupon,44,56
+2018,Tech,Amazon,39,61
+2018,Tech,Etsy,54,46
+2018,Tech,Microsoft,26,74
+2018,Tech,Salesforce,30.9,68.7
+2018,Tech,Pandora,49,51
+2018,Tech,Uber,38,62
+2018,Tech,Slack,44.7,55.3
+2018,Tech,AirBnB,41.15,59
+2018,Tech,Netflix,43,57
+2018,Tech,Yelp,54,46
+2018,Entity,DiversityInc top 50,44,56
+2018,Entity,Fortune 500 CEOs,6,94
+2018,Government,US Congress,20,80
