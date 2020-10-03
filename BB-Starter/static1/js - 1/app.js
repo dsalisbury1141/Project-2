@@ -1,18 +1,18 @@
 
 //Readind in data and create horizonal dropdown 
 
-    d3.json("resources/stem_major_dem.json").then((data) => {
+    d3.json("resources/samples.json").then((data) => {
 //examine data file
         console.log(data);
         var selection = d3.select("#selDataset")
 
 //populates selection based on number selected
-        var sampleName = data.Rank
-        sampleName.forEach((Rank) => {
+        var sampleName = data.names
+        sampleName.forEach((name) => {
             selection
             .append("option")
-            .text(Rank)
-            .property("value", Rank);
+            .text(name)
+            .property("value", name);
         });
     });
  //Creating functions to build demographics table and Charts
@@ -25,8 +25,8 @@
 
 //Creating mFunctionfor metadata demographics table 
     function metadataTable(ID) {
-        d3.json("resources/stem_emp_dem.json").then((data) => {
-            var meta = data.Type;
+        d3.json("resources/samples.json").then((data) => {
+            var meta = data.metadata;
             var sampleArray = meta.filter(dataObj => dataObj.id == ID);
             var callback = sampleArray[0];
             var PANEL = d3.select("#sample-metadata");
@@ -37,7 +37,6 @@
         });
       });
     }
-
 
 // Create function Barchart and call data
     function buildBar(ID) {
