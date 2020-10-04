@@ -13,13 +13,7 @@ function stemTable(data){
       row.append("td").text(element.Company);
       row.append("td").text(element.Female);
       row.append("td").text(element.Male);
-      row.append("td").text(element.Asian);
-      row.append("td").text(element.Latino);
-      row.append("td").text(element.White);
-      row.append("td").text(element.Black);
-      row.append("td").text(element.Multi);
-      row.append("td").text(element.Other);
-      row.append("td").text(element.Undeclared);
+      
   })
 }
 //load table 

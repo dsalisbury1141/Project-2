@@ -74,7 +74,7 @@ select {
 }
 
 #table-area th {
-  text-align: center;
+  text-align: left;
 }
 
 #table-area th:first-child,
@@ -98,7 +98,7 @@ select {
   padding: 20px;
   margin: 0;
   background: black;
-  background-image: url("../images/nasa.jpg");
+  background-image: url("../images/STEM2.jpg");
   background-attachment: fixed;
   background-position: bottom center;
   background-size: cover;
@@ -186,6 +186,7 @@ select {
     content: attr(data-th);
   }
 
+
   .hero h1 {
     animation: smaller-title 1.2s forwards linear;
   }
@@ -223,4 +224,3 @@ select {
     opacity: 1;
   }
 }
-
