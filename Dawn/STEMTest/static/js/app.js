@@ -27,8 +27,9 @@ form.on("submit",mouseClick);
 function mouseClick() {
     var datetimeInput = d3.select('#datetime').property('value')
     console.log(tableData)
-    var datetimeFilter = tableData.filter(row => row.Date === parseInt(datetimeInput)
-    )
+    var datetimeFilter = tableData.filter(row => row.Date === datetimeInput);
+    //var datetimeFilter = tableData.filter(row => row.Date === parseInt(datetimeInput)
+   // )
     //var datetimeFilter = tableData.filter(row => row.Type === datetimeInput);
     d3.event.preventDefault()
     stemTable(datetimeFilter);

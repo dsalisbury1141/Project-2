@@ -1,20 +1,6 @@
 [
   {
     "Date": 2014,
-    "Type": "Country",
-    "Company": "U.S. Population",
-    "Female": 50.79,
-    "Male": 49.21,
-    "White": 64,
-    "Asian": 4,
-    "Latino": 16,
-    "Black": 12,
-    "Multi": 1,
-    "Other": 3,
-    "Undeclared": null
-  },
-  {
-    "Date": 2014,
     "Type": "Social Media",
     "Company": "Facebook",
     "Female": 31,
@@ -431,20 +417,6 @@
     "Black": 2,
     "Multi": 2,
     "Other": null,
-    "Undeclared": null
-  },
-  {
-    "Date": 2016,
-    "Type": "Country",
-    "Company": "U.S. Population",
-    "Female": 50.79,
-    "Male": 49.21,
-    "White": 64,
-    "Asian": 4,
-    "Latino": 16,
-    "Black": 12,
-    "Multi": 1,
-    "Other": 3,
     "Undeclared": null
   },
   {
@@ -897,20 +869,6 @@
   },
   {
     "Date": 2018,
-    "Type": "Country",
-    "Company": "U.S. Population",
-    "Female": 51,
-    "Male": 49,
-    "White": 61,
-    "Asian": 5.7,
-    "Latino": 17.8,
-    "Black": 13.3,
-    "Multi": 2.6,
-    "Other": 0.2,
-    "Undeclared": null
-  },
-  {
-    "Date": 2018,
     "Type": "Social Media",
     "Company": "Facebook",
     "Female": 35,
@@ -1327,20 +1285,6 @@
     "Black": 9,
     "Multi": null,
     "Other": null,
-    "Undeclared": null
-  },
-  {
-    "Date": 2015,
-    "Type": "Country",
-    "Company": "U.S. Population",
-    "Female": 50.79,
-    "Male": 49.21,
-    "White": 64,
-    "Asian": 4,
-    "Latino": 16,
-    "Black": 12,
-    "Multi": 1,
-    "Other": 3,
     "Undeclared": null
   },
   {
@@ -1775,20 +1719,6 @@
     "Black": 2,
     "Multi": 2,
     "Other": null,
-    "Undeclared": null
-  },
-  {
-    "Date": 2018,
-    "Type": "Country",
-    "Company": "U.S. Population",
-    "Female": 51,
-    "Male": 49,
-    "White": 61,
-    "Asian": 5.7,
-    "Latino": 17.8,
-    "Black": 13.3,
-    "Multi": 2.6,
-    "Other": 0.2,
     "Undeclared": null
   },
   {
