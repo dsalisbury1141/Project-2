@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gender</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h2>Gender Distibution by Major Category</h2>
+    <select id="selDataset" onchange="getData(this.value)">
+        <option value="bio">Biology & Life Science</option>
+        <option value="computers">Computers & Math</option>
+        <option value="engineering">Engineering</option>
+        <option value="health">Health</option>
+        <option value="sciences">Physical Sciences</option>
+        <option value="total">Total</option>
+    </select>
+
+    <div id="pie"></div>
+
+    <script src="data.js"></script>
+    <script src="plots.js"></script>
+</body>
+</html>
