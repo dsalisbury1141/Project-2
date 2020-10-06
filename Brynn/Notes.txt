@@ -1,1 +1,3 @@
-this is to use for notes
+https://project-2-stem-demographics.herokuapp.com
+https://project-2-stem-demographics.herokuapp.com/employee_demographics
+https://project-2-stem-demographics.herokuapp.com/major_demographics
