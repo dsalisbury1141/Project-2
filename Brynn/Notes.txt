@@ -1,5 +1,25 @@
-To run the dashboard and API locally:
+To run the dashboard and API locally the FIRST time:
 -------------------------------------
+1. Open a terminal in Project-2/Brynn
+2. Run the command
+	pip install virtualenv
+3. Run the command
+	virtualenv env
+4. Run the command
+	source env/Scripts/activate
+5. Run the command
+	export APP_SETTINGS="config.DevelopmentConfig"
+6. Run the command
+	pip install -r requirements.txt
+7. Run the command
+	 python manage.py runserver
+8. The terminal will print the line "Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)"
+	NOTE: The number after the ":" might be different for you. Make sure you use the URL your terminal displays.
+9. Go to the URL listed in your browser.
+
+
+To run the dashboard and API locally (after the first time):
+------------------------------------------------------------
 1. Open a terminal in Project-2/Brynn
 2. Run the command
 	source env/Scripts/activate
