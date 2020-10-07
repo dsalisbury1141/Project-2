@@ -17,7 +17,7 @@ class Stem_Employee_Demographics(db.Model):
         self.Male = Male
 
     def __repr__(self):
-        return '<Stem Employee Demographics {}>'.format(self.breed)
+        return '<Stem Employee Demographics {}>'.format(self.Stem_Employee_Demographics)
 
     def serialize(self):
         return {
@@ -53,7 +53,7 @@ class Stem_Major_Demographics(db.Model):
         self.Median = Median
 
     def __repr__(self):
-        return '<Stem Major Demographics {}>'.format(self.breed)
+        return '<Stem Major Demographics {}>'.format(self.Stem_Major_Demographics)
 
     def serialize(self):
         return {
@@ -67,3 +67,28 @@ class Stem_Major_Demographics(db.Model):
             'ShareWomen':self.ShareWomen,
             'Median':self.Median
         }
+
+class Demographic_Totals(db.Model):
+    __tablename__ = 'Demographic_Totals'
+
+    Type = db.Column(db.Text, primary_key = True)
+    Men = db.Column(db.Integer)
+    Women = db.Column(db.Integer)
+
+    def __init__(self, Type, Men, Women):
+        self.Type = Type
+        self.Men = Men
+        self.Women = Women
+    
+    def __repr__(self):
+        return '<Demographic Totals {}>'.format(self.Demographic_Totals)
+
+    def serialize(self):
+        return {
+            'Type':self.Type,
+            'Men':self.Men,
+            'Women':self.Women
+        }
+
+    def toString(self):
+        return "Men: " + str(self.Men) + ", Women: " + str(self.Women)

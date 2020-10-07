@@ -25,6 +25,13 @@ with con as c:
             Median INTEGER
         );
     """)
+    c.execute("""
+        CREATE TABLE Demographic_Totals (
+            Type TEXT NOT NULL PRIMARY KEY,
+            Men INT,
+            Women INT
+        );
+    """)
 
     with open('employee_diversity.csv','r') as f:
         dr = csv.DictReader(f)
@@ -37,3 +44,6 @@ with con as c:
         to_db_2 = [(i['Rank'], i['Major_code'], i['Major'], i['Major_category'], i['Total'], i['Men'], i['Women'], i['ShareWomen'], i['Median']) for i in dr2]
 
     c.executemany("INSERT INTO Stem_Major_Demographics (Rank, Major_code, Major, Major_category, Total, Men, Women, ShareWomen, Median) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);", to_db_2)
+
+    vals = [['bio', 71822, 113941], ['computers', 156333, 131567], ['engineering', 408021, 312985], ['health', 186009, 328049], ['sciences', 148616, 79480], ['total', 972858, 966304]]
+    c.executemany("INSERT INTO Demographic_Totals (Type, Men, Women) VALUES (?, ?, ?);", vals)

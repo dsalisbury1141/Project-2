@@ -9,7 +9,7 @@ app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-from models import Stem_Employee_Demographics, Stem_Major_Demographics
+from models import Stem_Employee_Demographics, Stem_Major_Demographics, Demographic_Totals
 
 @app.route("/")
 def home():
@@ -47,5 +47,18 @@ def majors():
     try:
         majors = Stem_Major_Demographics.query.all()
         return jsonify([x.serialize() for x in majors])
+    except Exception as e:
+        return(str(e))
+
+@app.route("/totals")
+def totals():
+    try:
+        totals = Demographic_Totals.query.all()
+        retVal = "["
+        for t in totals:
+            retVal += t.Type + ": { " + t.toString() + " }, "
+        retVal = retVal[:-2]
+        retVal += "]"
+        return jsonify(retVal)
     except Exception as e:
         return(str(e))

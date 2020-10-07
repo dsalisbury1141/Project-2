@@ -33,6 +33,22 @@ function plot_employee_by_date(selected_date) {
 
             //plot bar chart
             Plotly.newPlot("bar", bar_data, bar_layout);
+
+            /**
+             * For Chrissy
+             */
+            // var pie_data = [{
+            //     values: sample_values,
+            //     labels: companies,
+            //     type: 'pie'
+            // }];
+
+            // var pie_layout = {
+            //     height: 600,
+            //     width: 600
+            // };
+
+            // Plotly.newPlot("my-div", pie_data, pie_layout);
         });
 }
 //change event function
