@@ -23,6 +23,25 @@ def employees():
     except Exception as e:
         return(str(e))
 
+@app.route("/employee_demographics/<year_>")
+def employees_by_year(year_):
+    try:
+        employees = Stem_Employee_Demographics.query.filter(Stem_Employee_Demographics.Date == year_).all()
+        return jsonify([x.serialize() for x in employees])
+    except Exception as e:
+        return(str(e))
+
+@app.route("/employee_demographic_years")
+def employee_years():
+    try:
+        years = Stem_Employee_Demographics.query.with_entities(Stem_Employee_Demographics.Date).distinct().order_by(Stem_Employee_Demographics.Date)
+        y = []
+        for x in years:
+            y.append(x[0])
+        return jsonify(y)
+    except Exception as e:
+        return(str(e))
+
 @app.route("/major_demographics")
 def majors():
     try:
