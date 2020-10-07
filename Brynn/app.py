@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import func
 import os
@@ -13,7 +13,7 @@ from models import Stem_Employee_Demographics, Stem_Major_Demographics, Demograp
 
 @app.route("/")
 def home():
-    return ("Project 2")
+    return render_template("index.html")
 
 @app.route("/employee_demographics")
 def employees():

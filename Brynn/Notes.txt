@@ -1,3 +1,27 @@
-https://project-2-stem-demographics.herokuapp.com
-https://project-2-stem-demographics.herokuapp.com/employee_demographics
-https://project-2-stem-demographics.herokuapp.com/major_demographics
+To run the dashboard and API locally:
+-------------------------------------
+1. Open a terminal in Project-2/Brynn
+2. Run the command
+	source env/Scripts/activate
+3. Run the command
+	export APP_SETTINGS="config.DevelopmentConfig"
+4. Run the command
+	 python manage.py runserver
+5. The terminal will print the line "Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)"
+	NOTE: The number after the ":" might be different for you. Make sure you use the URL your terminal displays.
+6. Go to the URL listed in your browser.
+
+
+
+Available API Endpoints:
+------------------------
+/ 				-> Displays the dashboard
+/employee_demographics		-> GETs all employee demographic data
+/employee_demographics/<year>	-> GETs all employee demographic data for the specified year
+/employee_demographic_years	-> GETs all distinct years from the employee demographic data
+/major_demographics		-> GETs all major demographics
+/totals				-> GETs demographic totals data
+
+
+
+The dashboard and API are available on Heroku at: https://project-2-stem-demographics.herokuapp.com/

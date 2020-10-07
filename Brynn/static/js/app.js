@@ -1,9 +1,8 @@
-const proxyurl = "https://cors-anywhere.herokuapp.com/";
-const employee_year_url = "https://project-2-stem-demographics.herokuapp.com/employee_demographic_years"
-const employee_url = "https://project-2-stem-demographics.herokuapp.com/employee_demographics"
+const employee_year_url = "/employee_demographic_years"
+const employee_url = "/employee_demographics"
 
 function plot_employee_by_date(selected_date) {
-    fetch(proxyurl + employee_url + "/" + selected_date)
+    fetch(employee_url + "/" + selected_date)
         .then(response => response.json())
         .then(data => {
             some_data = data.slice(0, 5)
@@ -57,10 +56,8 @@ function selectionChanged(date) {
 }
 //init function
 function init() {
-
-    //find dropdown
     var dropdown = d3.select("#year-select");
-    fetch(proxyurl + employee_year_url)
+    fetch(employee_year_url)
         .then(response => response.json())
         .then(r => {
             r.forEach(x => {
