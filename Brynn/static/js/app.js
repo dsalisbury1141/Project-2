@@ -1,8 +1,8 @@
-const employee_year_url = "/employee_demographic_years"
+const employee_year_url = "/employee_demographics/years"
 const employee_url = "/employee_demographics"
 
 function plot_employee_by_date(selected_date) {
-    fetch(employee_url + "/" + selected_date)
+    fetch(employee_year_url + "/" + selected_date)
         .then(response => response.json())
         .then(data => {
             some_data = data.slice(0, 5)
