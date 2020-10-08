@@ -34,7 +34,11 @@
           <div class="card card-body bg-light">
             <div class="card-text">
               <h5>Year:</h5>
-              <select id="year-select" onchange="selectionChanged(this.value)"></select>
+              <select id="year-select" onchange="yearSelectionChanged(this.value)"></select>
+              <h5>Company Category:</h5>
+              <select id="company-type-select" onchange="companyTypeSelectionChanged(this.value)"></select>
+              <h5>Company:</h5>
+              <select id="company-select" onchange="companySelectionChanged(this.value)"></select>
             </div>
           </div>
         </div>
@@ -47,6 +51,12 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="col-5">
+        <div id="pie"></div>
+      </div>
+      <div class="col-5">
+        <div id="company-bar"></div>
       </div>
     </div>
   </div>

@@ -35,12 +35,20 @@ To run the dashboard and API locally (after the first time):
 
 Available API Endpoints:
 ------------------------
-/ 				-> Displays the dashboard
-/employee_demographics		-> GETs all employee demographic data
-/employee_demographics/<year>	-> GETs all employee demographic data for the specified year
-/employee_demographic_years	-> GETs all distinct years from the employee demographic data
-/major_demographics		-> GETs all major demographics
-/totals				-> GETs demographic totals data
+/ 					-> Displays the dashboard
+/employee_demographics			-> GETs all employee demographic data
+/employee_demographics/years		-> GETs all distinct years from the employee demographic data
+/employee_demographics/years/<year>	-> GETs all employee demographic data for the specified year
+/employee_demographics/types		-> GETs all distinct company types from the employee demographic data
+/employee_demographics/types/<type>	-> GETs all employee demographic data for the specified company type
+/employee_demographics/companies	-> GETs all distinct companies from the employee demographic data
+/employee_demographics/companies/<c>	-> GETs all employee demographic data for the specified company
+/major_demographics			-> GETs all major demographics
+/major_demographics/categories		-> GETs all distinct major categories from the major demographic data
+/major_demographics/categories/<c>	-> GETs all major demographic data for the specified major category
+/major_demographics/majors		-> GETs all distinct majors from the major demographic data
+/major_demographics/majors/<major>	-> GETs all major demographics for the specified major
+/totals					-> GETs demographic totals data
 
 
 

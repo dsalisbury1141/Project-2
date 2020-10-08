@@ -9,7 +9,7 @@ app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-from models import Stem_Employee_Demographics, Stem_Major_Demographics, Demographic_Totals
+from models import Stem_Employee_Demographics, Stem_Major_Demographics, Demographic_Totals, Company
 
 @app.route("/")
 def home():
@@ -64,11 +64,11 @@ def employees_by_type(type_):
 @app.route("/employee_demographics/companies")
 def employee_companies():
     try:
-        companies = Stem_Employee_Demographics.query.with_entities(Stem_Employee_Demographics.Company).distinct().order_by(Stem_Employee_Demographics.Company)
+        companies = Stem_Employee_Demographics.query.with_entities(Stem_Employee_Demographics.Company, Stem_Employee_Demographics.Type).distinct().order_by(Stem_Employee_Demographics.Company)
         c = []
         for x in companies:
-            c.append(x[0])
-        return jsonify(c)
+            c.append(Company(x.Company, x.Type))
+        return jsonify([x.serialize() for x in c])
     except Exception as e:
         return(str(e))
 

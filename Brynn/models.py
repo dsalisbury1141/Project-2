@@ -28,6 +28,20 @@ class Stem_Employee_Demographics(db.Model):
             'Male':self.Male
         }
 
+class Company():
+    Company = ""
+    Type = ""
+
+    def __init__(self, Company, Type):
+        self.Company = Company
+        self.Type = Type
+
+    def serialize(self):
+        return {
+            'Company':self.Company,
+            'Type':self.Type
+        }
+
 class Stem_Major_Demographics(db.Model):
     __tablename__ = 'Stem_Major_Demographics'
 
