@@ -95,7 +95,8 @@ function plot_employee_by_date_and_type(date, company_type) {
                 values: outerValues,
                 labels: companies,
                 textinfo: "label",
-                textposition: "outside"
+                textposition: "outside",
+                showlegend: false
             };
             var pie_data = [trace1, trace2];
             Plotly.newPlot("pie", pie_data);
