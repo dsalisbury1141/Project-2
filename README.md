@@ -1,5 +1,7 @@
 # Work in Progress this page is not yet completed :-) 
-
+## Women in STEM (Science, Technology, Engineering and Math)
+Heroku publish https://project-2-stem-demographics.herokuapp.com/
+<img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/Dash1.PNG" width="1000">
 # Project-2 Women in STEM
 This Project-2 includes Python Flask–powered RESTful API, website
 <h2>Created By</h2>
@@ -11,7 +13,6 @@ This Project-2 includes Python Flask–powered RESTful API, website
 ## Women in STEM (Science, Technology, Engineering and Math)
 Heroku publish https://project-2-stem-demographics.herokuapp.com/
 <img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/Dash1.PNG" width="1000">
-
 # Did you know? 
 •	Women own less than 10% of startups in the world.
 •	Women in the technology industry earn 29% less than their male counterparts.
