@@ -75,7 +75,7 @@ def employee_companies():
 @app.route("/employee_demographics/companies/<company_>")
 def employees_by_company(company_):
     try:
-        employees = Stem_Employee_Demographics.query.filter(func.upper(Stem_Employee_Demographics.Company) == func.upper(company_)).all()
+        employees = Stem_Employee_Demographics.query.filter(func.upper(Stem_Employee_Demographics.Company) == func.upper(company_)).order_by(Stem_Employee_Demographics.Date).all()
         return jsonify([x.serialize() for x in employees])
     except Exception as e:
         return(str(e))

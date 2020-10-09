@@ -3,7 +3,7 @@ const employee_url = "/employee_demographics"
 const employee_company_types_url = "/employee_demographics/types"
 const employee_companies_url = "/employee_demographics/companies"
 
-function plot_employee_by_date(selected_date) {
+function plot_employee_by_date(selected_date, company_type, company) {
     fetch(employee_year_url + "/" + selected_date)
         .then(response => response.json())
         .then(data => {
@@ -12,9 +12,11 @@ function plot_employee_by_date(selected_date) {
             var female = [];
             var male = [];
             data.forEach(x => {
-                companies.push(x.Company);
-                female.push(x.Female);
-                male.push(x.Male);
+                if (x.Type.toString() === company_type.toString() && (company === "All" || x.Company.toString() === company)) {
+                    companies.push(x.Company);
+                    female.push(x.Female);
+                    male.push(x.Male);
+                }
             });
 
             var trace1 = {
@@ -31,10 +33,15 @@ function plot_employee_by_date(selected_date) {
             };
             var bar_data = [trace1, trace2];
 
+            var titleText = "Gender Comparison for " + company_type.toString() + " Companies in " + selected_date.toString();
+            if (company !== "All") {
+                titleText = "Gender Comparison for " + company.toString() + " in " + selected_date.toString();
+            }
+
             //layout for bar chart
             var bar_layout = {
                 yaxis: { tickmode: "auto" },
-                title: { text: "Gender Comparison by Company for " + selected_date.toString() },
+                title: { text: titleText },
                 barmode: "group"
             };
 
@@ -58,7 +65,7 @@ function plot_employee_by_date(selected_date) {
             // Plotly.newPlot("my-div", pie_data, pie_layout);
         });
 }
-function plot_employee_by_date_and_type(date, company_type) {
+function plot_employee_by_date_and_type(date, company_type, company) {
     fetch(employee_company_types_url + "/" + company_type.replace(" ", "%20"))
         .then(response => response.json())
         .then(data => {
@@ -68,19 +75,21 @@ function plot_employee_by_date_and_type(date, company_type) {
             var innerValues = [];
             var outerValues = [];
             sample_data.forEach(x => {
-                companies.push(x.Company);
-                outerValues.push(Number(x.Female) + Number(x.Male));
-                innerValues.push(Number(x.Female));
-                innerValues.push(Number(x.Male));
-                innerLabels.push(x.Company + " Females");
-                innerLabels.push(x.Company + " Males");
+                if (company === "All" || x.Company.toString() === company) {
+                    companies.push(x.Company);
+                    outerValues.push(Number(x.Female) + Number(x.Male));
+                    innerValues.push(Number(x.Female));
+                    innerValues.push(Number(x.Male));
+                    innerLabels.push(x.Company + " Females");
+                    innerLabels.push(x.Company + " Males");
+                }
             });
             var trace1 = {
                 type: "pie",
                 hole: 0.5,
                 sort: false,
                 direction: "clockwise",
-                domain: { x: [0.15, 0.85], y: [0.15, 0.85]},
+                domain: { x: [0.15, 0.85], y: [0.15, 0.85] },
                 values: innerValues,
                 labels: innerLabels,
                 textinfo: "value",
@@ -103,54 +112,63 @@ function plot_employee_by_date_and_type(date, company_type) {
         });
 }
 function plot_employee_by_company(company) {
-    fetch(employee_companies_url + "/" + company.replace(" ", "%20"))
-        .then(response => response.json())
-        .then(data => {
-            years = [];
-            female = [];
-            male = [];
-            data.forEach(x => {
-                years.push(x.Date);
-                female.push(x.Female);
-                male.push(x.Male);
+    if (company === "All") {
+        $("#company-bar").html("<h5 style='text-align: center; padding-top: 25%;'>Waiting on company selection.</h5>");
+    }
+    else {
+        fetch(employee_companies_url + "/" + company.replace(" ", "%20"))
+            .then(response => response.json())
+            .then(data => {
+                $("#company-bar").html("");
+                years = [];
+                female = [];
+                male = [];
+                data.forEach(x => {
+                    years.push(x.Date);
+                    female.push(x.Female);
+                    male.push(x.Male);
+                });
+                var trace1 = {
+                    x: years,
+                    y: female,
+                    type: "bar",
+                    name: "Female"
+                };
+                var trace2 = {
+                    x: years,
+                    y: male,
+                    type: "bar",
+                    name: "Male"
+                };
+                var bar_data = [trace1, trace2];
+                var bar_layout = {
+                    yaxis: { tickmode: "auto " },
+                    title: { text: data[0].Company.toString() },
+                    barmode: "group"
+                };
+                Plotly.newPlot("company-bar", bar_data, bar_layout);
             });
-            var trace1 = {
-                x: years,
-                y: female,
-                type: "bar",
-                name: "Female"
-            };
-            var trace2 = {
-                x: years,
-                y: male,
-                type: "bar",
-                name: "Male"
-            };
-            var bar_data = [trace1, trace2];
-            var bar_layout = {
-                yaxis: { tickmode: "auto " },
-                title: { text: data[0].Company.toString() },
-                barmode: "group"
-            };
-            Plotly.newPlot("company-bar", bar_data, bar_layout);
-        });
+    }
 }
 //year dropdown change event
 function yearSelectionChanged(date) {
-    plot_employee_by_date(date);
-    plot_employee_by_date_and_type(date, $('#company-type-select :selected').val());
+    plot_employee_by_date(date, $('#company-type-select :selected').val(), $('#company-select :selected').val());
+    plot_employee_by_date_and_type(date, $('#company-type-select :selected').val(), $('#company-select :selected').val());
     plot_employee_by_company($('#company-select :selected').val());
 }
 //company category dropdown change event
 async function companyTypeSelectionChanged(company_type) {
-    plot_employee_by_date_and_type($('#year-select :selected').val(), company_type);
     populateCompanies(company_type)
         .then(selected_company => {
+            plot_employee_by_date($('#year-select :selected').val(), company_type, selected_company);
+            plot_employee_by_date_and_type($('#year-select :selected').val(), company_type, selected_company);
             plot_employee_by_company(selected_company);
         })
 }
 //company dropdown change event
 function companySelectionChanged(company) {
+    plot_employee_by_date($('#year-select :selected').val(), $('#company-type-select :selected').val(), company);
+    plot_employee_by_date_and_type($('#year-select :selected').val(), $('#company-type-select :selected').val(), company);
     plot_employee_by_company(company)
 }
 //populate the companies drop down
@@ -159,7 +177,7 @@ async function populateCompanies(company_type) {
     var company_dropdown = d3.select("#company-select");
     let response = await fetch(employee_companies_url);
     let r = await response.json();
-    var companies = [];
+    var companies = ["All"];
     r.forEach(x => {
         if (x.Type.toString() === company_type.toString()) {
             companies.push(x.Company);
@@ -199,7 +217,7 @@ function init() {
                     fetch(employee_companies_url)
                         .then(response => response.json())
                         .then(r => {
-                            var companies = [];
+                            var companies = ["All"];
                             r.forEach(x => {
                                 if (x.Type.toString() === selected_type.toString()) {
                                     companies.push(x.Company);
@@ -211,11 +229,11 @@ function init() {
                             selected_company = companies[0];
                         })
                         .then(() => {
-                            plot_employee_by_date(selected_year);
-                            plot_employee_by_date_and_type(selected_year, selected_type);
+                            plot_employee_by_date(selected_year, selected_type, selected_company);
+                            plot_employee_by_date_and_type(selected_year, selected_type, selected_company);
                             plot_employee_by_company(selected_company);
                         });
                 });
         });
 }
-init();
+//init();
