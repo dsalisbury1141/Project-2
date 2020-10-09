@@ -3,7 +3,6 @@
 Heroku publish https://project-2-stem-demographics.herokuapp.com/
 <img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/Dash1.PNG" width="1000">
 # Project-2 Women in STEM
-This Project-2 includes Python Flask–powered RESTful API, website
 <h2>Created By</h2>
 <li>Brynn Hamilton</li>
 <li>Christine Hemphill</li>
