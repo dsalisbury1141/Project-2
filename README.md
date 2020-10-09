@@ -10,17 +10,14 @@ This Project-2 includes Python Flask–powered RESTful API, website
 <li>Christina Suckow</li>
 <li>Dawn Salisbury</li>
 
-## Women in STEM (Science, Technology, Engineering and Math)
-Heroku publish https://project-2-stem-demographics.herokuapp.com/
-<img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/Dash1.PNG" width="1000">
 # Did you know? 
-•	Women own less than 10% of startups in the world.
-•	Women in the technology industry earn 29% less than their male counterparts.
-•	3 out of 4 young girls express an interest in computer science.
-•	Statistics show that 1 out of 4 jobs are held by women in the IT indisutry in 2019.
-•	In the last 40 years, almost 90% of all information technology licenses were made by male-only teams. Less than 2% of tech teams include women.
-•	20% of engineering graduates are women and only 11% of working engineers are women.
-•	Netflix is one of the companies that really work on gender equality and show that 47% of the employees are women.
+<li>Women own less than 10% of startups in the world</li>
+<li>Women in the technology industry earn 29% less than their male counterparts</li>
+<li>3 out of 4 young girls express an interest in computer science</li>
+<li>Statistics show that 1 out of 4 jobs are held by women in the IT indisutry in 2019</li>
+<li>In the last 40 years, almost 90% of all information technology licenses were made by male-only teams. Less than 2% of tech teams include women</li>
+<li>20% of engineering graduates are women and only 11% of working engineers are women</li>
+<li>Netflix is one of the companies that really work on gender equality and show that 47% of the employees are women</li>
    - Credit: https://leftronic.com/women-in-technology-statistics/
 
 # Data Munging and Cleaning 
