@@ -39,7 +39,7 @@ body {
 }
 
 .navbar {
-  padding: 15px;
+  padding: 25px;
   margin: 0;
   background-color: rgb(103, 51, 119);
 }
@@ -224,7 +224,4 @@ select {
   to {
     opacity: 1;
   }
-}
-.col-md-2{
-  background-color: rgb(103, 51, 119);
 }

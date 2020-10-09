@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 2</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+  <canvas id="canvas-basic" style="position: fixed; display: block; width: 100%; height: 100%; top:0; right:0; bottom:0; left:0;"></canvas>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Women in STEM</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Our Story</a>
+          <a class="nav-link" href="stem_filter.html">STEM Employee Demographics Filter Search</a>
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+        </div>
+      </div>
+    </nav>
+  <div class="container-fluid">
+    <div class="jumbotron text-center" style="position: relative; background: none;">
+      <h1 class="display-4">The Past, Present, and Future of Women in STEM</h1>
+    </div>
+  </div>
+  <div class="container-fluid m-4">
+    <div class="row">
+      <div class="col-2">
+        <div class="row">
+          <div class="card card-body" style="background: rgba(255, 255, 255, 0.0); border: none;">
+            <div class="card-text">
+              <h5>Year:</h5>
+              <select id="year-select" class="form-control" onchange="yearSelectionChanged(this.value)"></select>
+              <h5 class="mt-3">Company Category:</h5>
+              <select id="company-type-select" class="form-control" onchange="companyTypeSelectionChanged(this.value)"></select>
+              <h5 class="mt-3">Company:</h5>
+              <select id="company-select" class="form-control" onchange="companySelectionChanged(this.value)"></select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-5">
+        <div id="pie"></div>
+      </div>
+      <div class="col-5">
+        <div id="company-bar"></div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div id="bar"></div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="/static/js/app.js"></script>
+  <script type="text/javascript" src="/static/js/granim.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      init();
+      var granimInstance = new Granim({
+        element: '#canvas-basic',
+        direction: 'diagonal',
+        isPausedWhenNotInView: true,
+        states: {
+          "default-state": {
+            gradients: [
+              ['#ff9966', '#ff5e62'],
+              ['#00F260', '#0575E6'],
+              ['#e1eec3', '#f05053']
+            ]
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
