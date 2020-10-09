@@ -1,8 +1,8 @@
-## Work in Progress this page is not yet completed :-) 
+# Work in Progress this page is not yet completed :-) 
 
 # Project-2 Women in STEM
 This Project-2 includes Python Flask–powered RESTful API, website
-# Team 7 
+
 Brynn Hamilton
 Christine Hemphill
 Christina Suckow
