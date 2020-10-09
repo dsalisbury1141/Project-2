@@ -7,6 +7,7 @@ function plot_employee_by_date(selected_date, company_type, company) {
     fetch(employee_year_url + "/" + selected_date)
         .then(response => response.json())
         .then(data => {
+            $("#bar").html("");
 
             var companies = [];
             var female = [];
@@ -18,57 +19,64 @@ function plot_employee_by_date(selected_date, company_type, company) {
                     male.push(x.Male);
                 }
             });
-
-            var trace1 = {
-                x: companies,
-                y: female,
-                type: "bar",
-                name: "Female"
-            };
-            var trace2 = {
-                x: companies,
-                y: male,
-                type: "bar",
-                name: "Male"
-            };
-            var bar_data = [trace1, trace2];
-
-            var titleText = "Gender Comparison for " + company_type.toString() + " Companies in " + selected_date.toString();
-            if (company !== "All") {
-                titleText = "Gender Comparison for " + company.toString() + " in " + selected_date.toString();
+            if (female.length === 0 && male.length === 0) {
+                $("#bar").html("<h5 style='text-align: center; padding-top: 8%;'>No data available for selected year.</h5>");
             }
+            else {
+                var trace1 = {
+                    x: companies,
+                    y: female,
+                    type: "bar",
+                    name: "Female"
+                };
+                var trace2 = {
+                    x: companies,
+                    y: male,
+                    type: "bar",
+                    name: "Male"
+                };
+                var bar_data = [trace1, trace2];
 
-            //layout for bar chart
-            var bar_layout = {
-                yaxis: { tickmode: "auto" },
-                title: { text: titleText },
-                barmode: "group"
-            };
+                var titleText = "Gender Comparison for " + company_type.toString() + " Companies in " + selected_date.toString();
+                if (company !== "All") {
+                    titleText = "Gender Comparison for " + company.toString() + " in " + selected_date.toString();
+                }
 
-            //plot bar chart
-            Plotly.newPlot("bar", bar_data, bar_layout);
+                //layout for bar chart
+                var bar_layout = {
+                    yaxis: { tickmode: "auto" },
+                    title: { text: titleText },
+                    barmode: "group",
+                    plot_bgcolor: "rgba(255,255,255,0.2)",
+                    paper_bgcolor: "rgba(255,255,255,0.2)"
+                };
 
-            /**
-             * For Chrissy
-             */
-            // var pie_data = [{
-            //     values: sample_values,
-            //     labels: companies,
-            //     type: 'pie'
-            // }];
+                //plot bar chart
+                Plotly.newPlot("bar", bar_data, bar_layout);
 
-            // var pie_layout = {
-            //     height: 600,
-            //     width: 600
-            // };
+                /**
+                 * For Chrissy
+                 */
+                // var pie_data = [{
+                //     values: sample_values,
+                //     labels: companies,
+                //     type: 'pie'
+                // }];
 
-            // Plotly.newPlot("my-div", pie_data, pie_layout);
+                // var pie_layout = {
+                //     height: 600,
+                //     width: 600
+                // };
+
+                // Plotly.newPlot("my-div", pie_data, pie_layout);
+            }
         });
 }
 function plot_employee_by_date_and_type(date, company_type, company) {
     fetch(employee_company_types_url + "/" + company_type.replace(" ", "%20"))
         .then(response => response.json())
         .then(data => {
+            $("#pie").html("");
             var sample_data = data.filter(s => s.Date.toString() === date.toString());
             var companies = [];
             var innerLabels = [];
@@ -84,31 +92,45 @@ function plot_employee_by_date_and_type(date, company_type, company) {
                     innerLabels.push(x.Company + " Males");
                 }
             });
-            var trace1 = {
-                type: "pie",
-                hole: 0.5,
-                sort: false,
-                direction: "clockwise",
-                domain: { x: [0.15, 0.85], y: [0.15, 0.85] },
-                values: innerValues,
-                labels: innerLabels,
-                textinfo: "value",
-                textposition: "inside",
-                showlegend: false
-            };
-            var trace2 = {
-                type: "pie",
-                hole: 0.7,
-                sort: false,
-                direction: "clockwise",
-                values: outerValues,
-                labels: companies,
-                textinfo: "label",
-                textposition: "outside",
-                showlegend: false
-            };
-            var pie_data = [trace1, trace2];
-            Plotly.newPlot("pie", pie_data);
+            if (innerValues.length === 0) {
+                $("#pie").html("<h5 style='text-align: center; padding-top: 25%;'>No data available for selected year.</h5>");
+            }
+            else {
+                var trace1 = {
+                    type: "pie",
+                    hole: 0.5,
+                    sort: false,
+                    direction: "clockwise",
+                    domain: { x: [0.15, 0.85], y: [0.15, 0.85] },
+                    values: innerValues,
+                    labels: innerLabels,
+                    textinfo: "value",
+                    textposition: "inside",
+                    showlegend: false
+                };
+                var trace2 = {
+                    type: "pie",
+                    hole: 0.7,
+                    sort: false,
+                    direction: "clockwise",
+                    values: outerValues,
+                    labels: companies,
+                    textinfo: "label",
+                    textposition: "outside",
+                    showlegend: false
+                };
+                var titleText = "Gender Comparison for " + company_type.toString() + " Companies in " + date.toString();
+                if (company !== "All") {
+                    titleText = "Gender Comparison for " + company.toString() + " in " + date.toString();
+                }
+                var layout = {
+                    plot_bgcolor: "rgba(255,255,255,0.2)",
+                    paper_bgcolor: "rgba(255,255,255,0.2)",
+                    title: { text: titleText }
+                };
+                var pie_data = [trace1, trace2];
+                Plotly.newPlot("pie", pie_data, layout);
+            }
         });
 }
 function plot_employee_by_company(company) {
@@ -144,7 +166,9 @@ function plot_employee_by_company(company) {
                 var bar_layout = {
                     yaxis: { tickmode: "auto " },
                     title: { text: data[0].Company.toString() },
-                    barmode: "group"
+                    barmode: "group",
+                    plot_bgcolor: "rgba(255,255,255,0.2)",
+                    paper_bgcolor: "rgba(255,255,255,0.2)"
                 };
                 Plotly.newPlot("company-bar", bar_data, bar_layout);
             });
