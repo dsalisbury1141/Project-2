@@ -10,9 +10,8 @@ Dawn Salisbury
 
 ## Women in STEM (Science, Technology, Engineering and Math)
 Heroku publish https://project-2-stem-demographics.herokuapp.com/
-<img align="center" src="https://Link here" width="1000">
+<img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/Dash1.PNG" width="1000">
 
-## The Problem
 # Did you know? 
 •	Women own less than 10% of startups in the world.
 •	Women in the technology industry earn 29% less than their male counterparts.
@@ -23,10 +22,7 @@ Heroku publish https://project-2-stem-demographics.herokuapp.com/
 •	Netflix is one of the companies that really work on gender equality and show that 47% of the employees are women.
    - Credit: https://leftronic.com/women-in-technology-statistics/
 
-## Solution
-
-
-# Data Muging and cleaning 
+# Data Munging and Cleaning 
   •	Cleaned Data Set, changed format from tab delimiter to comma delimiter
   •	Accounted for null, Removed white space
   •	Cleaned CSV
@@ -35,7 +31,7 @@ Removed race to control scope
 Normalized date format (alternated between month and year vs. only year)
 Removed Type: Country to avoid data skewing
 
-## Getting Intimate With Our Data
+# Getting Intimate With Our Data
 • Begin to review the data with Pandas
 • Two seperate data sources
   - STEM Employee Demographics
@@ -45,10 +41,10 @@ Removed Type: Country to avoid data skewing
 <img align="center" src="https://Link here" width="1000">
 
 
-## Implimentation The Process of Coding and Creating Our Website
+# Implimentation The Process of Coding and Creating Our Website
 We all learned a lot obout deploying  a Flask_powered Restful API to be hosten on Heroku 
 
-# Why SQLite instead of Postgresql? 
+Why SQLite instead of Postgresql? 
 • Simplicity of SQLite 
     Database built into python and doesn’t require additional packages
     Only needs the .db file
@@ -64,7 +60,7 @@ We all learned a lot obout deploying  a Flask_powered Restful API to be hosten o
 • Flask API & Endpoints 
 <img align="center" src="https://Link here" width="1000">
 
-## Building the Dashboard
+# Building the Dashboard
 • Created 3 interactive visualizations using Plotly.js
 • Created 3 dropdowns
     Year
