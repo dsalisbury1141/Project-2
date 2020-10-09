@@ -2,11 +2,11 @@
 
 # Project-2 Women in STEM
 This Project-2 includes Python Flask–powered RESTful API, website
-
-Brynn Hamilton
-Christine Hemphill
-Christina Suckow
-Dawn Salisbury
+<h2>Created By</h2>
+<li>Brynn Hamilton</li>
+<li>Christine Hemphill</li>
+<li>Christina Suckow</li>
+<li>Dawn Salisbury</li>
 
 ## Women in STEM (Science, Technology, Engineering and Math)
 Heroku publish https://project-2-stem-demographics.herokuapp.com/
