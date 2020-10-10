@@ -29,9 +29,9 @@ Heroku publish https://project-2-stem-demographics.herokuapp.com/
    - Credit: https://leftronic.com/women-in-technology-statistics/
 
 # Data Munging and Cleaning 
-<h2>Cleaned Data Set, changed format from tab delimiter to comma delimiter</h2>
+<h5>Cleaned Data Set, changed format from tab delimiter to comma delimiter</h5>
 <li>Accounted for null, Removed white space</li>
-<h2>Cleaned CSV</h2>
+<h5>Cleaned CSV</h5>
 <li>Focused on gender disparity only (male vs. female)</li>
 <li>Removed race to control scope</li>
 <li>Normalized date format (alternated between month and year vs. only year)</li>
@@ -48,22 +48,22 @@ Heroku publish https://project-2-stem-demographics.herokuapp.com/
 
 
 # Implimentation The Process of Coding and Creating Our Website
-<h2>We all learned a lot obout deploying  a Flask_powered Restful API to be hosten on Heroku</h2>
+<h5>We all learned a lot obout deploying  a Flask_powered Restful API to be hosten on Heroku</h5>
 
-<h2>Why SQLite instead of Postgresql?</h2>
+<h5>Why SQLite instead of Postgresql?</h5>
 • Simplicity of SQLite 
     Database built into python and doesn’t require additional packages
     Only needs the .db file
     Self-contained within Flask application and does not require a separate service.
     Simplifies the process for pulling information or adding updates. 
     Works best with smaller data sets
-<h2>Python script that creates the tables & loads the data</h2>
+<h5>Python script that creates the tables & loads the data</h5>
     More convenient for collaboration
     Ease of access for sharing updates (sharing a file)
     Doesn’t require creating a new script
-<h2>Hosting on heroku</h2>
+<h5>Hosting on heroku</h5>
     Doesn’t require pushing updates to a new server
-<h2>Flask API & Endpoints</h2>
+<h5>Flask API & Endpoints</h5>
 <img align="center" src="https://Link here" width="1000">
 
 # Building the Dashboard
