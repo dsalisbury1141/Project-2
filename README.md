@@ -1,6 +1,6 @@
 ## Project 2 Women in STEM (Science, Technology, Engineering and Math)
 Heroku publish https://project-2-stem-demographics.herokuapp.com/
-<img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/Dash1.PNG" width="1000">
+<img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/Newdashboard.PNG" width="1000">
 <h2>Created By</h2>
 <h5>Brynn Hamilton</h5>
 <h5>Christina Suckow</h5>
@@ -63,6 +63,7 @@ Heroku publish https://project-2-stem-demographics.herokuapp.com/
 <img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/Flask-enpoint.PNG" width="1000">
 
 # Building the Dashboard
+<img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/Newdashboard.PNG" width="600">
 <li>Created 3 interactive visualizations using Plotly.js</li>
 <li>Created 3 dropdowns</li>
     Year, Company, and Business Category
@@ -75,14 +76,17 @@ Heroku publish https://project-2-stem-demographics.herokuapp.com/
     Visual comparison between genders at each company
     Display comparisons for a specific company across all years available
 <li>Navigation bar linking to the Filter table</li> 
-<img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/table.png" width="1000">
+<img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/table.png" width="600">
 
 # Closing The Gap
 <img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/Closing-gap.PNG" width="1000">
 <li>There are many resources out there to learn more about this topic we will include just a few links to help your journey to gain knowledge on this topic</li>
 <li>There are also many many options to gain education in the STEM industry, there are paid collecges, bootcamps and online sources, some online sources are low cost or free.
 Like you tube, Udemy, linkedin and many others..  </li>
-
+Here are some great links to begin your journey
+WIT Women in Technology https://www.womenintechnology.org/
+Leftronic: Technology employment agency 17+ Women in Technology Statistics to Know in 2020 https://leftronic.com/women-in-technology-statistics/
+HackerRank : 2019 Women in Tech report https://research.hackerrank.com/women-in-tech/2019
 
 # Data sources 
 	https://github.com/fivethirtyeight/data/tree/master/college-majors
