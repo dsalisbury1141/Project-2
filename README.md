@@ -3,10 +3,9 @@ Heroku publish https://project-2-stem-demographics.herokuapp.com/
 <img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/Dash1.PNG" width="1000">
 # Project-2 Women in STEM
 <h2>Created By</h2>
-<li>Brynn Hamilton</li>
-<li>Christine Hemphill</li>
-<li>Christina Suckow</li>
-<li>Dawn Salisbury</li>
+<h5>Brynn Hamilton</h5>
+<h5>Christina Suckow</h5>
+<h5>Dawn Salisbury</h5>
 
 # Did you know? 
 <li>Rapid growth in future years</li>
@@ -48,7 +47,7 @@ Heroku publish https://project-2-stem-demographics.herokuapp.com/
 
 
 # Implimentation The Process of Coding and Creating Our Website
-<h5>We all learned a lot obout deploying  a Flask_powered Restful API to be hosten on Heroku</h5>
+<h5>We all learned a lot obout deploying  a Flask_powered Restful API to be hosted on Heroku</h5>
 
 ## Why SQLite instead of Postgresql?</h5>
 <li>Simplicity of SQLite </li>
