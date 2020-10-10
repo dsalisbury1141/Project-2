@@ -82,13 +82,13 @@ Heroku publish https://project-2-stem-demographics.herokuapp.com/
 <img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/Closing-gap.PNG" width="1000">
 <li>There are many resources out there to learn more about this topic we will include just a few links to help your journey to gain knowledge on this topic</li>
 <li>There are also many many options to gain education in the STEM industry, there are paid collecges, bootcamps and online sources, some online sources are low cost or free.
-Like you tube, Udemy, linkedin and many others..  </li>
-Here are some great links to begin your journey
+<li>Like you tube, Udemy, linkedin and many others..  </li>
+<li>Here are some great links to begin your journey</li>
 WIT Women in Technology https://www.womenintechnology.org/
 Leftronic: Technology employment agency 17+ Women in Technology Statistics to Know in 2020 https://leftronic.com/women-in-technology-statistics/
 HackerRank : 2019 Women in Tech report https://research.hackerrank.com/women-in-tech/2019
 
-# Data sources 
+# Our Data sources 
 	https://github.com/fivethirtyeight/data/tree/master/college-majors
 	https://github.com/fivethirtyeight/data/blob/master/college-majors/women-stem.csv
 
