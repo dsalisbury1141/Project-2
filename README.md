@@ -1,7 +1,6 @@
-## Women in STEM (Science, Technology, Engineering and Math)
+## Project 2 Women in STEM (Science, Technology, Engineering and Math)
 Heroku publish https://project-2-stem-demographics.herokuapp.com/
 <img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/Dash1.PNG" width="1000">
-# Project-2 Women in STEM
 <h2>Created By</h2>
 <h5>Brynn Hamilton</h5>
 <h5>Christina Suckow</h5>
@@ -42,12 +41,10 @@ Heroku publish https://project-2-stem-demographics.herokuapp.com/
   - STEM Employee Demographics
   - STEM College Major Demographics
 <li>Sorting and plotting data to build a our story<li>
-<img align="center" src="https://Link here" width="1000">
-<img align="center" src="https://Link here" width="1000">
-
+<img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/plot1.PNG" width="600">
 
 # Implimentation The Process of Coding and Creating Our Website
-<h5>We all learned a lot obout deploying  a Flask_powered Restful API to be hosted on Heroku</h5>
+<h5>We all learned a lot about deploying a Flask_powered Restful API to be hosted on Heroku</h5>
 
 ## Why SQLite instead of Postgresql?</h5>
 <li>Simplicity of SQLite </li>
@@ -63,7 +60,7 @@ Heroku publish https://project-2-stem-demographics.herokuapp.com/
 <li>Hosting on heroku</li>
     Doesn’t require pushing updates to a new server
 <li>Flask API & Endpoints</li>
-<img align="center" src="https://Link here" width="1000">
+<img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/Flask-enpoint.PNG" width="1000">
 
 # Building the Dashboard
 <li>Created 3 interactive visualizations using Plotly.js</li>
@@ -77,6 +74,14 @@ Heroku publish https://project-2-stem-demographics.herokuapp.com/
 <li>Grouped bar charts</li>
     Visual comparison between genders at each company
     Display comparisons for a specific company across all years available
+<li>Navigation bar linking to the Filter table</li> 
+<img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/table.png" width="1000">
+
+# Closing The Gap
+<img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/Closing-gap.PNG" width="1000">
+<li>There are many resources out there to learn more about this topic we will include just a few links to help your journey to gain knowledge on this topic</li>
+<li>There are also many many options to gain education in the STEM industry, there are paid collecges, bootcamps and online sources, some online sources are low cost or free.
+Like you tube, Udemy, linkedin and many others..  </li>
 
 
 # Data sources 
