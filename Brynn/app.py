@@ -15,6 +15,10 @@ from models import Stem_Employee_Demographics, Stem_Major_Demographics, Demograp
 def home():
     return render_template("index.html")
 
+@app.route("/stem_filter")
+def stem_filter():
+    return render_template("stem_filter.html")
+
 @app.route("/employee_demographics")
 def employees():
     try:
