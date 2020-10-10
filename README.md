@@ -50,35 +50,34 @@ Heroku publish https://project-2-stem-demographics.herokuapp.com/
 # Implimentation The Process of Coding and Creating Our Website
 <h5>We all learned a lot obout deploying  a Flask_powered Restful API to be hosten on Heroku</h5>
 
-<h5>Why SQLite instead of Postgresql?</h5>
-• Simplicity of SQLite 
+## Why SQLite instead of Postgresql?</h5>
+<li>Simplicity of SQLite </li>
     Database built into python and doesn’t require additional packages
     Only needs the .db file
     Self-contained within Flask application and does not require a separate service.
     Simplifies the process for pulling information or adding updates. 
     Works best with smaller data sets
-<h5>Python script that creates the tables & loads the data</h5>
+<li>Python script that creates the tables & loads the data</li>
     More convenient for collaboration
     Ease of access for sharing updates (sharing a file)
     Doesn’t require creating a new script
-<h5>Hosting on heroku</h5>
+<li>Hosting on heroku</li>
     Doesn’t require pushing updates to a new server
-<h5>Flask API & Endpoints</h5>
+<li>Flask API & Endpoints</li>
 <img align="center" src="https://Link here" width="1000">
 
 # Building the Dashboard
-• Created 3 interactive visualizations using Plotly.js
-• Created 3 dropdowns
-    Year
-    Company and Company Category
+<li>Created 3 interactive visualizations using Plotly.js</li>
+<li>Created 3 dropdowns</li>
+    Year, Company, and Business Category
     Dropdowns update all 3 charts in real time (if data is available)
     Company dropdown updates and defaults to “All” when Company Category changes
-• Layered donut chart
+<li>Layered donut chart</li>
     Outer subplot for company totals
     Inner subplot for gender comparison
-• Grouped bar charts
-Visual comparison between genders at each company
-Display comparisons for a specific company across all years available
+<li>Grouped bar charts</li>
+    Visual comparison between genders at each company
+    Display comparisons for a specific company across all years available
 
 
 # Data sources 
