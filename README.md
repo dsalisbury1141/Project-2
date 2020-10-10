@@ -1,15 +1,23 @@
-# Work in Progress this page is not yet completed :-) 
 ## Women in STEM (Science, Technology, Engineering and Math)
 Heroku publish https://project-2-stem-demographics.herokuapp.com/
 <img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/Dash1.PNG" width="1000">
 # Project-2 Women in STEM
 <h2>Created By</h2>
-<li>Brynn Hamilton</li>
-<li>Christine Hemphill</li>
-<li>Christina Suckow</li>
-<li>Dawn Salisbury</li>
+<h5>Brynn Hamilton</h5>
+<h5>Christina Suckow</h5>
+<h5>Dawn Salisbury</h5>
 
 # Did you know? 
+<li>Rapid growth in future years</li>
+<li>The gender gap of females to male is worldwide</li>
+<li>Women face a stereotype of what is considered to be women’s work</li>
+<li>Men make up the majority of students in STEM majors in college</li>
+<li>Women who pursue a career in technology face the challenge of a male dominated workforce</li>
+<li>Women in the field don’t have many other female role models</li>
+<li>Among working parents, women leave their positions at a higher rate than men</li>
+<li>Women as board members only represent 18% in 2019 up from 15%</li>
+<li>Worldwide, women only represent 16% of positions in management</li>
+<li>The typical STEM worker earns ⅔ more than someone in another field</li>
 <li>Women own less than 10% of startups in the world</li>
 <li>Women in the technology industry earn 29% less than their male counterparts</li>
 <li>3 out of 4 young girls express an interest in computer science</li>
@@ -20,56 +28,55 @@ Heroku publish https://project-2-stem-demographics.herokuapp.com/
    - Credit: https://leftronic.com/women-in-technology-statistics/
 
 # Data Munging and Cleaning 
-  •	Cleaned Data Set, changed format from tab delimiter to comma delimiter
-  •	Accounted for null, Removed white space
-  •	Cleaned CSV
-Focused on gender disparity only (male vs. female)
-Removed race to control scope
-Normalized date format (alternated between month and year vs. only year)
-Removed Type: Country to avoid data skewing
+<h5>Cleaned Data Set, changed format from tab delimiter to comma delimiter</h5>
+<li>Accounted for null, Removed white space</li>
+<h5>Cleaned CSV</h5>
+<li>Focused on gender disparity only (male vs. female)</li>
+<li>Removed race to control scope</li>
+<li>Normalized date format (alternated between month and year vs. only year)</li>
+<li>Removed Type: Country to avoid data skewing</li>
 
 # Getting Intimate With Our Data
-• Begin to review the data with Pandas
-• Two seperate data sources
+<li>Begin to review the data with Pandas</li>
+<li>Two seperate data sources
   - STEM Employee Demographics
   - STEM College Major Demographics
-• Sorting and plotting data to build a our story
+<li>Sorting and plotting data to build a our story<li>
 <img align="center" src="https://Link here" width="1000">
 <img align="center" src="https://Link here" width="1000">
 
 
 # Implimentation The Process of Coding and Creating Our Website
-We all learned a lot obout deploying  a Flask_powered Restful API to be hosten on Heroku 
+<h5>We all learned a lot obout deploying  a Flask_powered Restful API to be hosted on Heroku</h5>
 
-Why SQLite instead of Postgresql? 
-• Simplicity of SQLite 
+## Why SQLite instead of Postgresql?</h5>
+<li>Simplicity of SQLite </li>
     Database built into python and doesn’t require additional packages
     Only needs the .db file
     Self-contained within Flask application and does not require a separate service.
     Simplifies the process for pulling information or adding updates. 
     Works best with smaller data sets
-• Python script that creates the tables & loads the data
+<li>Python script that creates the tables & loads the data</li>
     More convenient for collaboration
     Ease of access for sharing updates (sharing a file)
     Doesn’t require creating a new script
-• Hosting on heroku
+<li>Hosting on heroku</li>
     Doesn’t require pushing updates to a new server
-• Flask API & Endpoints 
+<li>Flask API & Endpoints</li>
 <img align="center" src="https://Link here" width="1000">
 
 # Building the Dashboard
-• Created 3 interactive visualizations using Plotly.js
-• Created 3 dropdowns
-    Year
-    Company and Company Category
+<li>Created 3 interactive visualizations using Plotly.js</li>
+<li>Created 3 dropdowns</li>
+    Year, Company, and Business Category
     Dropdowns update all 3 charts in real time (if data is available)
     Company dropdown updates and defaults to “All” when Company Category changes
-• Layered donut chart
+<li>Layered donut chart</li>
     Outer subplot for company totals
     Inner subplot for gender comparison
-• Grouped bar charts
-Visual comparison between genders at each company
-Display comparisons for a specific company across all years available
+<li>Grouped bar charts</li>
+    Visual comparison between genders at each company
+    Display comparisons for a specific company across all years available
 
 
 # Data sources 
