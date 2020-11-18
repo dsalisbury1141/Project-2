@@ -1,4 +1,5 @@
 ## Project 2 Women in STEM (Science, Technology, Engineering and Math)
+This is a Python Flask Powered Restful API app
 Heroku publish https://project-2-stem-demographics.herokuapp.com/
 <img align="center" src="https://github.com/dsalisbury1141/Project-2/blob/master/Dawn/Images/Newdashboard.PNG" width="1000">
 <h2>Created By</h2>
@@ -94,3 +95,6 @@ HackerRank : 2019 Women in Tech report https://research.hackerrank.com/women-in-
 
 
 
+How to run my code:
+1. Open link above to run deployed site
+2. Download my repository and run the flask Python app.py on local host
